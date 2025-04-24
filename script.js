@@ -5,6 +5,7 @@ let timeLeft = document.querySelector("#time-left");
 let score = document.querySelector("#score");
 let result = 0;
 let hitPosition;
+let currentTime = 60;
 function randomSquare(){
      
      squares.forEach(
@@ -22,23 +23,25 @@ function showMove(){
      timerId = setInterval(randomSquare, 1000)
 }
 
-
 squares.forEach(
      square => {
           square.addEventListener('click', ()=> {
                if(square.id == hitPosition){
-                    console.log(square.id)
-                    //showMove();
                     result++;
-                    square.classList.add('mole')
-                    console.log(result)
-                    //clearInterval(timerId)
-               }
-               else{
-                    showMove()
-                    square[hitPosition].classList.add('mole')
-                    clearInterval(timerId)
+                    score.textContent = result
+                    hitPosition = null;
                }
           })
      }
 )
+showMove();
+let countDownTimerId = setInterval(countDown, 1000);
+
+function countDown() {
+     currentTime--
+     timeLeft.textContent = currentTime;
+     if(currentTime <= 0){
+          clearInterval(countDownTimerId)
+          clearInterval(timerId)
+     }
+}
