@@ -3,23 +3,16 @@ let squares = document.querySelectorAll('.square');
 let mole = document.querySelector('.mole');
 let timeLeft = document.querySelector("#time-left");
 let score = document.querySelector("#score");
+let result = 0;
 
+function randomSquare(){
+     
 squares.forEach(
-     (square) => {
-          square.addEventListener('click', 
-               () => {
-
-                    
-                    //square.classList.toggle("mole")
-                    console.log(square.id)
-                    if(square.id == square.id){
-                         square.classList.add('mole')
-                    }
-                    else if(square.id != square.id){
-                         square.classList.remove('mole')
-                    }
-                    
-               }
-          )
-     }
+     square => square.classList.remove('mole')
 )
+
+let randomPosition = squares[Math.floor(Math.random() * squares.length)].id;
+//console.log(randomPosition);
+}
+
+randomSquare()
