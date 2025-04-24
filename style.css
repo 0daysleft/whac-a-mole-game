@@ -1,7 +1,12 @@
+
+.result-timer{
+     display: none;
+}
+
 .grid{
      width: 606px;
      height: 606px;
-     display: flex;
+     display: none;
      flex-wrap: wrap;
 }
 
@@ -9,6 +14,14 @@
      height: 200px;
      width: 200px;
      border: 1px solid #111;
+}
+
+.btn{
+     width: 100%;
+     background-color: #003d99;
+     height: 96vh;
+     display: flex;
+     align-items: center;
 }
 
 #start-game {
