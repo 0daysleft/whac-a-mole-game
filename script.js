@@ -46,7 +46,7 @@ startGame.addEventListener('click', () => {
      currentTime = 10;
      startCounter()
      showMove()
-     startGame.style.display = 'none'
+     startGame.style.visibility = 'hidden'
      }
 )
 }
@@ -59,7 +59,7 @@ function countDown() {
      if(currentTime <= 0){
           clearInterval(countDownTimerId)
           clearInterval(timerId)
-          startGame.style.display = 'block'
+          startGame.style.visibility = 'visible'
      }
 }
 

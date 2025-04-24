@@ -11,6 +11,34 @@
      border: 1px solid #111;
 }
 
+#start-game {
+    background: linear-gradient(135deg, #1e90ff, #0a66c2); /* Tech blue gradient */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    margin: 20px auto;
+    display: block;
+}
+
+#start-game:hover {
+    background: linear-gradient(135deg, #0a66c2, #003d99);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+#start-game:active {
+    transform: scale(0.98);
+    background: #004080;
+}
+
 .mole{
      background-image: url('./click\ img.webp');
      background-position: center;
