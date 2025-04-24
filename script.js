@@ -3,10 +3,13 @@ let squares = document.querySelectorAll('.square');
 let mole = document.querySelector('.mole');
 let timeLeft = document.querySelector("#time-left");
 let score = document.querySelector("#score");
+let startGame = document.querySelector('#start-game');
 let result = 0;
+let countDownTimerId = null;
 let hitPosition = null;
 let timerId = null;
 let currentTime = 10;
+
 function randomSquare(){
      
      squares.forEach(
@@ -30,19 +33,33 @@ squares.forEach(
      }
 )
 
+function startCounter(){
+     countDownTimerId = setInterval(countDown, 1000);
+}
+
 function showMove(){
      timerId = setInterval(randomSquare, 1000)
 }
-
-showMove();
-
+if(startGame){
+startGame.addEventListener('click', () => {
+     result = 0;
+     currentTime = 10;
+     startCounter()
+     showMove()
+     startGame.style.display = 'none'
+     }
+)
+}
+else{
+     console.log("error happened")
+}
 function countDown() {
      currentTime--
      timeLeft.textContent = currentTime;
      if(currentTime <= 0){
           clearInterval(countDownTimerId)
           clearInterval(timerId)
+          startGame.style.display = 'block'
      }
 }
 
-let countDownTimerId = setInterval(countDown, 1000);
