@@ -20,12 +20,14 @@
      width: 100%;
      background-color: #003d99;
      height: 96vh;
-     display: flex;
+     display: none;
      align-items: center;
 }
 
 .btn-restart-game{
-     display: none !important;
+     display: flex !important;
+     flex-direction: column;
+     justify-content: center;
 }
 
 #start-game, #restart-game {
