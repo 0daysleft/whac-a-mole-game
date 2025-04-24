@@ -6,13 +6,17 @@ let score = document.querySelector("#score");
 let result = 0;
 
 function randomSquare(){
+     let randomPosition = squares[Math.floor(Math.random() * squares.length)].id;
      
 squares.forEach(
      square => square.classList.remove('mole')
 )
 
-let randomPosition = squares[Math.floor(Math.random() * squares.length)].id;
 //console.log(randomPosition);
+
+//squares[randomPosition].classList.add('mole')
+//console.log(randomPosition)
+//squares[randomPosition].classList.add('mole')
 }
 
 randomSquare()
