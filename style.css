@@ -16,7 +16,7 @@
      border: 1px solid #111;
 }
 
-.btn{
+.btn-start-game, .btn-restart-game{
      width: 100%;
      background-color: #003d99;
      height: 96vh;
@@ -24,7 +24,11 @@
      align-items: center;
 }
 
-#start-game {
+.btn-restart-game{
+     display: none !important;
+}
+
+#start-game, #restart-game {
     background: linear-gradient(135deg, #1e90ff, #0a66c2); /* Tech blue gradient */
     color: white;
     font-size: 1.1rem;
@@ -41,13 +45,13 @@
     display: block;
 }
 
-#start-game:hover {
+#start-game:hover, #restart-game:hover {
     background: linear-gradient(135deg, #0a66c2, #003d99);
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
-#start-game:active {
+#start-game:active, #restart-game:active {
     transform: scale(0.98);
     background: #004080;
 }
