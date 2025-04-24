@@ -42,6 +42,9 @@ function showMove(){
 }
 if(startGame){
 startGame.addEventListener('click', () => {
+     document.querySelector(".btn").style.display = 'none'
+     document.querySelector(".grid").style.display = 'flex'
+     document.querySelector(".result-timer").style.display = 'block'
      result = 0;
      currentTime = 10;
      startCounter()
@@ -60,6 +63,7 @@ function countDown() {
           clearInterval(countDownTimerId)
           clearInterval(timerId)
           startGame.style.visibility = 'visible'
+          document.querySelector(".grid").style.display = 'none'
      }
 }
 
