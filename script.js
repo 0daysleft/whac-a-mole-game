@@ -4,8 +4,9 @@ let mole = document.querySelector('.mole');
 let timeLeft = document.querySelector("#time-left");
 let score = document.querySelector("#score");
 let result = 0;
-let hitPosition;
-let currentTime = 60;
+let hitPosition = null;
+let timerId = null;
+let currentTime = 10;
 function randomSquare(){
      
      squares.forEach(
@@ -15,12 +16,6 @@ function randomSquare(){
 
 randomSquare.classList.add('mole')
 hitPosition = randomSquare.id;
-}
-
-
-let timerId; 
-function showMove(){
-     timerId = setInterval(randomSquare, 1000)
 }
 
 squares.forEach(
@@ -34,8 +29,12 @@ squares.forEach(
           })
      }
 )
+
+function showMove(){
+     timerId = setInterval(randomSquare, 1000)
+}
+
 showMove();
-let countDownTimerId = setInterval(countDown, 1000);
 
 function countDown() {
      currentTime--
@@ -45,3 +44,5 @@ function countDown() {
           clearInterval(timerId)
      }
 }
+
+let countDownTimerId = setInterval(countDown, 1000);
