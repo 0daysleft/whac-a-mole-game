@@ -5,7 +5,10 @@ squares.forEach(
      (square) => {
           square.addEventListener('click', 
                () => {
+
+                    
                     square.classList.toggle("mole")
+                    
                }
           )
      }
