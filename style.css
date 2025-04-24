@@ -12,5 +12,15 @@
 }
 
 .mole{
-     background: #000;
+     background-image: url('./click\ img.webp');
+     background-position: center;
+     background-size: cover;
+     text-align: center;
+}
+
+.mole::before{
+     content: "Hey There 👋, I'm Here";
+     color: rgb(0, 17, 255);
+     font-weight: bolder;
+     font-size: 1.5rem;
 }
