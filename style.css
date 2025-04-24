@@ -16,16 +16,20 @@
      border: 1px solid #111;
 }
 
-.btn-start-game, .btn-restart-game{
+.btn-start-game{
+     width: 100%;
+     background-color: #003d99;
+     height: 96vh;
+     display: flex;
+     align-items: center;
+}
+
+.btn-restart-game{
      width: 100%;
      background-color: #003d99;
      height: 96vh;
      display: none;
      align-items: center;
-}
-
-.btn-restart-game{
-     display: flex !important;
      flex-direction: column;
      justify-content: center;
 }

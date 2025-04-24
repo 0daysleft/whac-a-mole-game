@@ -4,6 +4,7 @@ let mole = document.querySelector('.mole');
 let timeLeft = document.querySelector("#time-left");
 let score = document.querySelector("#score");
 let startGame = document.querySelector('#start-game');
+let restartGame = document.querySelector('#restart-game');
 let result = 0;
 let countDownTimerId = null;
 let hitPosition = null;
@@ -42,7 +43,7 @@ function showMove(){
 }
 if(startGame){
 startGame.addEventListener('click', () => {
-     document.querySelector(".btn").style.display = 'none'
+     document.querySelector(".btn-start-game").style.display = 'none'
      document.querySelector(".grid").style.display = 'flex'
      document.querySelector(".result-timer").style.display = 'block'
      result = 0;
@@ -63,7 +64,11 @@ function countDown() {
           clearInterval(countDownTimerId)
           clearInterval(timerId)
           startGame.style.visibility = 'visible'
+          document.querySelector("#final-score").textContent = result;
           document.querySelector(".grid").style.display = 'none'
+          document.querySelector(".result-timer").style.display = 'none'
+          document.querySelector(".btn-restart-game").style.display = 'flex'
+          restartGame.addEventListener('click', () => location.reload())
      }
 }
 
