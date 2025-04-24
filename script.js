@@ -8,11 +8,11 @@ let result = 0;
 function randomSquare(){
      
      squares.forEach(
-          square => square.classList.remove('mole')
+          square => {square.classList.remove('mole')}
      )
-     let randomPosition = squares[Math.floor(Math.random() * squares.length)].id;
+     let randomSquare = squares[Math.floor(Math.random() * squares.length)];
 
-squares[randomPosition].classList.add('mole')
+randomSquare.classList.add('mole')
 }
 
-//let timerId = setInterval(randomSquare, 2000)
+//let timerId = setInterval(randomSquare, 20)
